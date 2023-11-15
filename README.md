@@ -1,7 +1,7 @@
 # Defli Scripts
 This is a repository for handy scripts for Defli
 
-## MongoDB Collector Service (adsb_collector) and program removal Script
+## MongoDB Collector Service (adsb_collector) and program Removal script
 Use this script to remove the MongoDB collector service and program instal from a Defli Ground station.
 
 ### Usage
