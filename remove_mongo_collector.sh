@@ -13,4 +13,22 @@ fi
 
 #change to user's home dir
 user_dir=$(getent passwd ${SUDO_USER:-$USER} | cut -d: -f6)
+echo "user_dir = $user_dir"
 cd $user_dir
+
+#get the user name
+user_name=sudo who am i | awk '{print $1}'
+
+
+service_file_path="/lib/systemd/system/adsb_collector.service"
+
+#remove any existing adsb_collector.service file
+if [ -e "$service_file_path" ]; then
+	echo "Disable and removing exiting adsb_collector service file..."
+#  systemctl stop adsb_collector
+  systemctl disable --now adsb_collector 
+	rm -f /lib/systemd/system/adsb_collector.service
+	rm -fr adsb-data-collector-mongodb
+fi
+
+
