@@ -22,9 +22,9 @@ user_name=sudo who am i | awk '{print $1}'
 
 service_file_path="/lib/systemd/system/adsb_collector.service"
 
-#remove any existing adsb_collector.service file
+#remove any existing adsb_collector.service file and program directory
 if [ -e "$service_file_path" ]; then
-	echo "Disable and removing exiting adsb_collector service file..."
+	echo "Disable and removing existing adsb_collector service file and deleting the adsb-data-collector-mongodb directory ..."
 #  systemctl stop adsb_collector
   systemctl disable --now adsb_collector 
 	rm -f /lib/systemd/system/adsb_collector.service
