@@ -19,8 +19,10 @@ Assumptions:
 
 If you wish to re-install, just run the Dealcracker install script (https://github.com/dealcracker/DefliMongoDB)
 
+Hat tip to Dealcracker for his earlier work on the install script that this is based on.
+
 ### Usage
 ```
 sudo bash -c "$(wget -O - https://raw.githubusercontent.com/Bigmaxi01/Defli/master/remove_mongo_collector.sh)"
 
-Hat tip to Dealcracker for his earlier work on the install script that this is based on.
+
