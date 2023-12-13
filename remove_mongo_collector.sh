@@ -30,7 +30,7 @@ if [ -e "$service_file_path" ]; then
 	rm -f /lib/systemd/system/adsb_collector.service
 	rm -fr adsb-data-collector-mongodb
  else
-  	echo -e "\n*** Service file /lib/systemd/system/adsb_collector.service not found..."
+  	echo "*** Service file /lib/systemd/system/adsb_collector.service not found..."
   	echo "*** adsb_collector service not installed."
 fi
 
