@@ -24,5 +24,3 @@ Hat tip to Dealcracker for his earlier work on the install script that this is b
 ### Usage
 ```
 sudo bash -c "$(wget -O - https://raw.githubusercontent.com/Bigmaxi01/Defli/master/remove_mongo_collector.sh)"
-
-
