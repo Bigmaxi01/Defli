@@ -25,10 +25,13 @@ service_file_path="/lib/systemd/system/adsb_collector.service"
 #remove any existing adsb_collector.service file and program directory
 if [ -e "$service_file_path" ]; then
 	echo "Disable and removing existing adsb_collector service file and deleting the adsb-data-collector-mongodb directory ..."
-#  systemctl stop adsb_collector
-  systemctl disable --now adsb_collector 
+	#  systemctl stop adsb_collector
+  	systemctl disable --now adsb_collector 
 	rm -f /lib/systemd/system/adsb_collector.service
 	rm -fr adsb-data-collector-mongodb
+ else
+ 	echo "Service file /lib/systemd/system/adsb_collector.service not found..."
+  	echo "adsb_collector service not installed."
 fi
 
 
