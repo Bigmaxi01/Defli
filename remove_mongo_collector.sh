@@ -2,7 +2,7 @@
 # Remove Defli MongoDB connector
 # Written by Bigmaxi
 #
-# last modified: 2023-11-15
+# last modified: 2023-12-13
 
 
 #enforce sudo
@@ -30,7 +30,7 @@ if [ -e "$service_file_path" ]; then
 	rm -f /lib/systemd/system/adsb_collector.service
 	rm -fr adsb-data-collector-mongodb
  else
-  	echo "*** Service file /lib/systemd/system/adsb_collector.service not found..."
+  	echo -e "\n*** Service file /lib/systemd/system/adsb_collector.service not found..."
   	echo "*** adsb_collector service not installed."
 fi
 
